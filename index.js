@@ -30,7 +30,7 @@ app.get("/item/get", async (req, res) => {
 		`${process.env.BASE_API_URL}item/get?itemid=${req.query.itemid}&shopid=${req.query.shopid}`,
 		{ headers: { "af-ac-enc-dat": "null" } }
 	);
-	res.json(200, { data: response.data });
+	res.json(200, { ...response.data });
 });
 
 app.listen(3000);
