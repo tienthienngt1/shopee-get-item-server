@@ -15,7 +15,7 @@ const corsOptions = {
 	},
 };
 
-//app.use(cors(corsOptions));
+app.use(cors());
 
 app.get("", (_req, res) => {
 	res.send("hello world");
