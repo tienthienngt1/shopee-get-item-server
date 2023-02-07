@@ -27,10 +27,10 @@ app.get("/about", (req, res) => {
 
 app.get("/item/get", async (req, res) => {
 	const response = await axios.get(
-		`${process.env.BASE_API_URL}item/get?itemid=${req.query.itemid}&shopid=${req.query.shopid}`,
+		`https://shopee.com.br/api/v4/item/get?itemid=${req.query.itemid}&shopid=${req.query.shopid}`,
 		{ headers: { "af-ac-enc-dat": "null" } }
 	);
 	res.json(200, { ...response.data });
 });
 
-app.listen(3000);
+app.listen(4400);
